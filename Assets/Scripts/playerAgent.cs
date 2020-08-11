@@ -111,7 +111,8 @@ public class playerAgent : Agent
     public override void CollectObservations()
     {   int layerMask=1;
         RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward),out hit,Mathf.Infinity,layerMask)){
+        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward)
+        ,out hit,Mathf.Infinity,layerMask)){
             AddVectorObs(1f);
         }
         // Distance to the Parking (1 float = 1 value)
