@@ -25,7 +25,8 @@ public class playerArea : MonoBehaviour
 
     public void SpawnCar()
     {
-        playerAgent.transform.position = transform.position + new Vector3(Random.Range(-6,6), Random.Range(-1.5f, 1.5f), 0f);
+        playerAgent.transform.position = transform.position + new Vector3(Random.Range(-6,6),
+        Random.Range(-1.5f, 1.5f), 0f);
         playerAgent.transform.rotation = Quaternion.Euler(0f,0f,90f);
         playerAgent.transform.position = new Vector3(8f, 3f, 0f);
         //playerAgent.transform.rotation = Quaternion.Euler(0f,Random.Range(0f, 360f), 0f);
