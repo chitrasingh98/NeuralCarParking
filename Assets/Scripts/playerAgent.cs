@@ -113,7 +113,8 @@ public class playerAgent : Agent
         RaycastHit hit;
         if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward)
         ,out hit,Mathf.Infinity,layerMask)){
-            AddVectorObs(1f);
+           //Distance from collision 1f=1 value
+            AddVectorObs(hit.distance);
         }
         // Distance to the Parking (1 float = 1 value)
         AddVectorObs(Vector3.Distance(parking, transform.position));
@@ -124,7 +125,7 @@ public class playerAgent : Agent
         // Direction Car is facing (1 Vector3 = 3 values)
         AddVectorObs(transform.forward);
 
-        //  1 + 3 + 3 = 7 total values
+        //  1 + 1 + 3 + 3 = 8 total values
     }
     private void FixedUpdate()
     {
